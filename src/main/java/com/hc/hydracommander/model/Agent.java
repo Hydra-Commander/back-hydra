@@ -8,7 +8,7 @@ import java.util.UUID;
 
 @Entity(name = "Agent")
 @Table(name = "agents")
-@Data
+
 public class Agent {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -19,4 +19,36 @@ public class Agent {
     //private StatusAgent status;
     private LocalDate lastActive;
 
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
+    public String getHostname() {
+        return hostname;
+    }
+
+    public void setHostname(String hostname) {
+        this.hostname = hostname;
+    }
+
+    public String getIpAdress() {
+        return ipAdress;
+    }
+
+    public void setIpAdress(String ipAdress) {
+        this.ipAdress = ipAdress;
+    }
+
+    public LocalDate getLastActive() {
+        return lastActive;
+    }
+
+    public void setLastActive(LocalDate lastActive) {
+        this.lastActive = lastActive;
+    }
 }
+
