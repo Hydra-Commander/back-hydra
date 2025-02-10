@@ -1,7 +1,7 @@
 package com.hc.hydracommander.security;
 
 import com.hc.hydracommander.model.User;
-import com.hc.hydracommander.repositories.UserRepository;
+import com.hc.hydracommander.repository.UserRepository;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

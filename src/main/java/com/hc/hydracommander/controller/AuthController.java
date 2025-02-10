@@ -4,7 +4,7 @@ import com.hc.hydracommander.controller.VO.LoginRequestDTO;
 import com.hc.hydracommander.controller.VO.RegisterRequestDTO;
 import com.hc.hydracommander.controller.VO.ResponseDTO;
 import com.hc.hydracommander.model.User;
-import com.hc.hydracommander.repositories.UserRepository;
+import com.hc.hydracommander.repository.UserRepository;
 import com.hc.hydracommander.security.TokenService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;

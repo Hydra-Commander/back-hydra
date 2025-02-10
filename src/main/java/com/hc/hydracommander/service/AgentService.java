@@ -1,7 +1,7 @@
-package com.hc.hydracommander.services;
+package com.hc.hydracommander.service;
 
 import com.hc.hydracommander.model.Agent;
-import com.hc.hydracommander.repositories.AgentRepository;
+import com.hc.hydracommander.repository.AgentRepository;
 import jakarta.persistence.NoResultException;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.UUID;
 
 @Service
 public class AgentService {
@@ -28,7 +27,7 @@ public class AgentService {
         return repository.saveAndFlush(agent);
     }
 
-    public Agent update(UUID id, Agent agent) {
+    public Agent update(Long id, Agent agent) {
         if (id == null) {
             throw new IllegalArgumentException("ID must be provided for update.");
         }
@@ -46,7 +45,7 @@ public class AgentService {
         return repository.findAll();
     }
 
-    public Agent findById(UUID id) {
+    public Agent findById(Long id) {
         return repository.findById(id).orElseThrow(() -> new NoResultException("Ops! Not Found entity for this id! :("));
     }
 
@@ -56,7 +55,7 @@ public class AgentService {
     }
 
     @Transactional
-    public void deleteById(UUID id) {
+    public void deleteById(Long id) {
         Optional<Agent> agentToDelete = repository.findById(id);
         if (agentToDelete.isPresent()) {
             repository.deleteById(id);

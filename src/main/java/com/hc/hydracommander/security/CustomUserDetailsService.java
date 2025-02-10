@@ -1,7 +1,7 @@
 package com.hc.hydracommander.security;
 
 import com.hc.hydracommander.model.User;
-import com.hc.hydracommander.repositories.UserRepository;
+import com.hc.hydracommander.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
